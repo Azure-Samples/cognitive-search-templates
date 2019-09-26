@@ -42,7 +42,7 @@ As you go throught the process, saving the following bits of information will he
 Once you have a knowledge store populated with enriched data in tables, download the template file, open it in Power BI, you will be prompted for the following:
 1. Skillset name
 2. Source data field
-3. Enrichment granularity 
+3. Enrichment granularity (document, page or sentence)
 4. Knowledge store (storage) account name
 5. You will be prompted for the storge account key the first time
 

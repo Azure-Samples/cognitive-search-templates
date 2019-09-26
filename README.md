@@ -1,11 +1,11 @@
 ---
 page_type: sample
 languages:
-- csharp
+- Power BI Template
 products:
-- dotnet
-description: "Add 150 character max description"
-urlFragment: "update-this-to-unique-url-stub"
+- Azure Cognitive Search
+description: "templatefor visualizing your enriched data from the knowledge stor."
+urlFragment: "/powerbi/templates"
 ---
 
 # Official Microsoft Sample

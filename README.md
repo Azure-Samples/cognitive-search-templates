@@ -4,7 +4,7 @@ languages:
 - Power BI Template
 products:
 - Azure Cognitive Search
-description: "templatefor visualizing your enriched data from the knowledge stor."
+description: "templatefor visualizing your enriched data from the knowledge store."
 urlFragment: "/powerbi/templates"
 ---
 
@@ -18,7 +18,7 @@ Guidance on onboarding samples to docs.microsoft.com/samples: https://review.doc
 Taxonomies for products and languages: https://review.docs.microsoft.com/new-hope/information-architecture/metadata/taxonomies?branch=master
 -->
 
-Give a short description for your sample here. What does it do and why is it important?
+This repository contains the samples to jump start your knowledge mining experience. Starting with a Power BI template that works out of the box with knowledge store projections created with the import data workflow within the Azure Cognitive Search service.
 
 ## Contents
 
@@ -32,22 +32,38 @@ Outline the file contents of the repository. It helps users navigate the codebas
 | `CONTRIBUTING.md` | Guidelines for contributing to the sample. |
 | `README.md`       | This README file.                          |
 | `LICENSE`         | The license for the sample.                |
+| `powerbi/`        | Folder contining the sample Power BI template.|
 
 ## Prerequisites
 
-Outline the required components and tools that a user might need to have on their machine in order to run the sample. This can be anything from frameworks, SDKs, OS versions or IDE releases.
+You will need to setup an enrichment pipeline within Azure Cognitive Search with:
+1. Select the knowledge store option
+2. Project your enrichments to tables
+
+As you go throught the process, saving the following bits of information will help you in the following steps:
+1. The skillset name
+2. Source data field (the field ypui chose to enrich)
+3. Knowledge store storage account name
 
 ## Setup
 
-Explain how to prepare the sample once the user clones or downloads the repository. The section should outline every step necessary to install dependencies and set up any settings (for example, API keys and output folders).
+Once you have a knowledge store populated with enriched data in tables, download the tmplate file, open it in Power BI, you will be prompted for the following:
+1. Skillset name
+2. Source data field
+3. Enrichment granularity 
+4. Knowledge store (storage) account name
+5. You will be prompted for the storge ccount key the first time
+
 
 ## Runnning the sample
 
-Outline step-by-step instructions to execute the sample and see its output. Include steps for executing the sample from the IDE, starting specific services in the Azure portal or anything related to the overall launch of the code.
+Once you have the data loaded from tables into Power BI, you can now explore your enriched data with Power BI!
+
+Explore latent relationships, hierarchy and the structure you created with the enrichments. 
 
 ## Key concepts
 
-Provide users with more context on the tools and services used in the sample. Explain some of the code that is being used and how services interact with each other.
+This is an example of a Poer BI template that you can buildbased on your enriched data. As you build more complex skillsets, edit your projections, you can then edit this template or create a new one to explore the enrichments.
 
 ## Contributing
 

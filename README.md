@@ -10,15 +10,7 @@ urlFragment: "/powerbi/templates"
 
 # Official Microsoft Sample
 
-<!-- 
-Guidelines on README format: https://review.docs.microsoft.com/help/onboard/admin/samples/concepts/readme-template?branch=master
-
-Guidance on onboarding samples to docs.microsoft.com/samples: https://review.docs.microsoft.com/help/onboard/admin/samples/process/onboarding?branch=master
-
-Taxonomies for products and languages: https://review.docs.microsoft.com/new-hope/information-architecture/metadata/taxonomies?branch=master
--->
-
-This repository contains the samples to jump start your knowledge mining experience. Starting with a Power BI template that works out of the box with knowledge store projections created with the import data workflow within the Azure Cognitive Search service.
+This repository contains the samples to jump start your knowledge mining experience. Starting with a Power BI template that works out of the box with knowledge store projections, created with the import data workflow in the Azure Cognitive Search service.
 
 ## Contents
 

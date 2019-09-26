@@ -54,7 +54,6 @@ Once you have a knowledge store populated with enriched data in tables, download
 4. Knowledge store (storage) account name
 5. You will be prompted for the storge account key the first time
 
-
 ## Runnning the sample
 
 Once you have the data loaded from tables into Power BI, you can now explore your enriched data with Power BI!

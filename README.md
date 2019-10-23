@@ -38,20 +38,20 @@ This repository contains the following items.
 
 1. You must have Power BI Desktop to use the template.
 
-1. For Azure Search, you must have used the Import data wizard in the Azure portal to create the knowledge store. The second page of the wizard captures the following inputs, which are necessary for using the Power BI template.
+1. For Azure Search, you must have filled in the second page of the Import data wizard in the Azure portal to create the knowledge store. The second page of the wizard captures the following inputs, which are necessary for using the Power BI template.
 
    + Include cognitive skills in the import process (this creates the skillset)
-   + Include the save to knowledge store option (predicated on having an Azure Storage account)
-   + Include projection options that save enriched content to tables
+   + Include the save to knowledge store option (this creates the knowledge store)
+   + Include projection options that save enriched content to tables (this structures the knowledge store)
 
 1. The wizard must have created all objects and enrichments before you can run the report. You can verify the knowledge store exists by using [Storage Explorer in the Azure portal](https://docs.microsoft.com/azure/search/knowledge-store-view-storage-explorer) to examine the table projections in Azure Table storage.
 
 1. Requirements for using the dashboard include the following parameters, which you can obtain from the wizard or the Azure portal:
 
-+  Skillset name
-+  Source data field (the field you chose to enrich, often it's `content` or `merged_content`)
-+  Enrichment granularity (Document, Pages, Sentences)
-+  Storage account used for knowledge store
+   + Skillset name
+   + Source data field (the field you chose to enrich, often it's `content` or `merged_content`)
+   + Enrichment granularity (Document, Pages, Sentences)
+   + Storage account used for knowledge store
 
 ## Set up the dashboard
 

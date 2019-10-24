@@ -1,71 +1,78 @@
 ---
 page_type: sample
 languages:
-- Power BI Template
+  - Power BI Template
 products:
-- Azure Cognitive Search
-description: "templatefor visualizing your enriched data from the knowledge store."
+  - azure
+  - azure-search
+name: Power BI template for knowledge store
+description: 'A Power BI template with visualizations intended for knowledge stores created using the Import data wizard in the Azure portal.'
 urlFragment: "/powerbi/templates"
 ---
 
-# Official Microsoft Sample
+# Power BI template for knowledge store (Azure Search)
 
-This repository contains the samples to jump start your knowledge mining experience. Starting with a Power BI template that works out of the box with knowledge store projections, created with the import data workflow in the Azure Cognitive Search service.
+![Flask sample MIT license badge](https://img.shields.io/badge/license-MIT-green.svg)
+
+This repository contains a Power BI template that provides visualzations for a [knowledge store created by the Import data wizard](https://docs.microsoft.com/azure/search/knowledge-store-create-portal) in the Azure portal. 
+
+When creating a knowledge store through the wizard, you have the option of downloading a Power BI template. Choosing that option brings you to this repository so that you can download the file. 
+
+Alongside the download link, the wizard gives you the parameters you'll need to initialize the dashboard from your desktop. Copy those parameters from the wizard now and save them for when you want to run the dashboard.
 
 ## Contents
 
-Outline the file contents of the repository. It helps users navigate the codebase, build configuration and any related assets.
+This repository contains the following items.
 
 | File/folder       | Description                                |
 |-------------------|--------------------------------------------|
-| `src`             | Sample source code.                        |
+| `powerbi/`        | Folder containing the sample Power BI template.|
 | `.gitignore`      | Define what to ignore at commit time.      |
-| `CHANGELOG.md`    | List of changes to the sample.             |
-| `CONTRIBUTING.md` | Guidelines for contributing to the sample. |
+| `CONTRIBUTING.md` | Guidelines for contributing to this project. |
+| `SECURITY.md`     | Instructions for reporting security bugs. |
 | `README.md`       | This README file.                          |
 | `LICENSE`         | The license for the sample.                |
-| `powerbi/`        | Folder conatining the sample Power BI template.|
+
 
 ## Prerequisites
 
-You will need to setup an enrichment pipeline within Azure Cognitive Search with the following options:
-1. Select the knowledge store option
-2. Project your enrichments to tables
+1. You must have Power BI Desktop to use the template.
 
-As you go throught the process, saving the following bits of information will help you in the following steps:
-1. The skillset name
-2. Source data field (the field you chose to enrich)
-3. Knowledge store storage account name
+1. For Azure Search, you must have filled in the second page of the Import data wizard in the Azure portal to create the knowledge store. The second page of the wizard captures the following inputs, which are necessary for using the Power BI template.
 
-## Setup
+   + Include cognitive skills in the import process (this creates the skillset)
+   + Include the save to knowledge store option (this creates the knowledge store)
+   + Include projection options that save enriched content to tables (this structures the knowledge store)
 
-Once you have a knowledge store populated with enriched data in tables, download the template file, open it in Power BI, you will be prompted for the following:
-1. Skillset name
-2. Source data field
-3. Enrichment granularity (document, page or sentence)
-4. Knowledge store (storage) account name
-5. You will be prompted for the storge account key the first time
+1. The wizard must have created all objects and enrichments before you can run the report. You can verify the knowledge store exists by using [Storage Explorer in the Azure portal](https://docs.microsoft.com/azure/search/knowledge-store-view-storage-explorer) to examine the table projections in Azure Table storage.
+
+1. Requirements for using the dashboard include the following parameters, which you can obtain from the wizard or the Azure portal:
+
+   + Skillset name
+   + Source data field (the field you chose to enrich, often it's `content` or `merged_content`)
+   + Enrichment granularity (Document, Pages, Sentences)
+   + Storage account used for knowledge store
+
+## Set up the dashboard
+
+You must have finished running the wizard, and all objects must exist. The knowledge store must contain the enriched content.
+
+1. Click the repository name **cognitive-search-templates** to go to the root folder.
+1. Click **Clone or Download** to get the file. If you download a zip file, right-click to extract its contents.
+1. Start Power BI Desktop.
+1. On File > Import > Power BI Templates, choose the **cognitive-search-content-analytics-template.pbit** file.
+1. When prompted, provide the following parameters:
+   +  Skillset name
+   +  Source data field
+   +  Enrichment granularity (document, page or sentence)
+   +  Knowledge store (storage) account name
+
+On first use, you will be prompted for the Storge account access key.
 
 ## Runnning the sample
 
-Once you have the data loaded from tables into Power BI, you can now explore your enriched data with Power BI!
-
-Explore latent relationships, hierarchy and the structure you created with the enrichments. 
+Once you have the data loaded from Azure tables into Power BI, you can explore latent relationships, hierarchy, and the structure of enriched content. 
 
 ## Key concepts
 
-This is an example of a Power BI template that you can build based on your enriched data. As you build more complex skillsets, edit your projections, you can then edit this template or create a new one to explore the enrichments.
-
-## Contributing
-
-This project welcomes contributions and suggestions.  Most contributions require you to agree to a
-Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
-the rights to use your contribution. For details, visit https://cla.opensource.microsoft.com.
-
-When you submit a pull request, a CLA bot will automatically determine whether you need to provide
-a CLA and decorate the PR appropriately (e.g., status check, comment). Simply follow the instructions
-provided by the bot. You will only need to do this once across all repos using our CLA.
-
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
-contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+This is an example of a Power BI template. It includes visualizations that tend to work well with enriched content. You can use this example as-is, or adapt it to accommodate more complex skillsets or projections.
